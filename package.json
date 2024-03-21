@@ -21,6 +21,7 @@
     "lint": "eslint --ext .ts",
     "lint:fix": "eslint --ext .ts --fix",
     "check:types": "tsc --noEmit",
+    "precommit": "npm run lint && npm run check:types",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -37,5 +38,10 @@
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.7.3",
     "husky": "^8.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   }
 }
