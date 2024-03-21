@@ -1,1 +1,1 @@
-export const isTrue = (val: unknown): boolean => val === true
+export const isTrue = (val: unknown): boolean => val == true
