@@ -1,0 +1,41 @@
+{
+  "name": "lvl-up-utils",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/gsar-lvl-up-utils.umd.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/gsar-lvl-up-utils.js",
+      "require": "./dist/gsar-lvl-up-utils.umd.cjs"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .ts",
+    "lint:fix": "eslint --ext .ts --fix",
+    "check:types": "tsc --noEmit",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "prettier": "^3.2.5",
+    "typescript": "*",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.7.3",
+    "husky": "^8.0.0"
+  }
+}
